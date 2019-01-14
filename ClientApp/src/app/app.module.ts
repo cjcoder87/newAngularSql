@@ -23,6 +23,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import 'hammerjs';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
+import { InProgress2Component } from './in-progress2/in-progress2.component';
+import { ScentabComponent } from './scentab/scentab.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatSortModule} from '@angular/material/sort';
+import {MatTableModule} from '@angular/material/table';
+import {MatIconModule} from '@angular/material/icon';
+import { Scentab2Component } from './scentab2/scentab2.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 
 @NgModule({
@@ -40,7 +49,10 @@ import { ProgressbarComponent } from './progressbar/progressbar.component';
     RibbonNavComponent,
     InProgressComponent,
     CompletedComponent,
-    ProgressbarComponent
+    ProgressbarComponent,
+    InProgress2Component,
+    ScentabComponent,
+    Scentab2Component
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -48,10 +60,16 @@ import { ProgressbarComponent } from './progressbar/progressbar.component';
     MatButtonModule, 
     MatCheckboxModule,
     BrowserAnimationsModule,
+    MatPaginatorModule,
+    MatRadioModule,
+    MatTableModule,
     MatProgressBarModule,
+    MatCardModule,
     MatTooltipModule,
     MatTabsModule,
     MatToolbarModule,
+    MatSortModule,
+    MatIconModule,
     MatDividerModule,
     FormsModule,
     RouterModule.forRoot([
@@ -62,6 +80,7 @@ import { ProgressbarComponent } from './progressbar/progressbar.component';
       { path: 'scope', component: ScopeComponent },
       { path: 'ribbon', component: RibbonNavComponent },
       { path: 'in-progress', component: InProgressComponent },
+      { path: 'in-progress2', component: InProgress2Component },
     ])
   ],
   providers: [],

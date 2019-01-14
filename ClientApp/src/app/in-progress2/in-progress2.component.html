@@ -1,0 +1,67 @@
+
+
+<mat-toolbar role="heading">
+  <span>Scenario Accelerator</span>
+
+  <span class="rightFace"></span>
+  <span ><i class="material-icons">settings</i></span>
+  <span ><i class="material-icons">person</i></span>
+  </mat-toolbar>
+
+  <mat-card>
+
+    <h2 id="scenario">Scenarios</h2>
+
+    <h3 id="search">Search</h3>
+
+    <div class="searchContainer">
+
+        <input class="searchBox" type="search" name="search" placeholder="">
+        <span ><i id="searchicon" class="searchIcon material-icons">search</i></span>
+
+      </div>
+
+<ul id="actionbar">
+   <li>
+      <mat-icon>add</mat-icon>
+      <span>New</span>
+  </li>
+  <li>
+ <mat-icon>edit</mat-icon>
+ <span>Edit</span>
+  </li>
+  <li>
+ <mat-icon>block</mat-icon>
+ <span>Inactive</span>
+
+
+    
+  </li>
+  <li>
+ <mat-icon>toll</mat-icon>
+ <span>Clone</span>
+  
+  </li>
+</ul>
+
+      
+
+<mat-tab-group>
+  <mat-tab label="In-Progress">
+
+    <app-scentab></app-scentab>
+    
+  </mat-tab>
+  <mat-tab label="Completed">
+      <app-scentab></app-scentab>
+      
+  </mat-tab>
+
+</mat-tab-group>
+
+
+<div id="scenarios"></div>
+
+</mat-card>
+
+<app-footer></app-footer>

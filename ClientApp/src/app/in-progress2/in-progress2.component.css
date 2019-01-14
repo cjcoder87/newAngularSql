@@ -1,0 +1,121 @@
+mat-card{
+    width: 95%;
+    margin: 20px auto;
+    background: white;
+}
+
+#scenario{
+    color: #00A6E7;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px auto;
+}
+#search{
+    font-size: 15px;
+}
+
+.searchContainer, #search{
+    margin-left: 15px;
+}
+/* Search Bar */
+
+.searchContainer {
+    display: grid;
+    grid-template-columns:1.5rem 4fr 1fr;
+    width:300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+  
+  }
+  
+  .searchContainer:focus-within i {
+    display: none;
+  }
+  
+  .searchContainer:focus-within .searchBox{
+    grid-column:1/4;
+  }
+  
+  .searchContainer:focus-within .searchBox::placeholder {
+    color:transparent;
+  }
+  
+  .searchIcon {
+    padding: 0.5rem;
+    grid-row:1;
+    grid-column:1/2;
+    z-index:2
+  }
+  
+  .searchBox {
+    border: 0;
+    padding: 0.5rem;
+    grid-column:2/4;
+    grid-row:1;
+    outline:none;
+  }
+  
+/* Action Bar */
+
+#actionbar{
+
+    position: relative;
+    top: 115px;
+    left: -7px;
+    z-index: 9999;
+}
+
+
+#actionbar li{
+    display:inline;
+    color: black;
+    font-size: 12px;
+}
+#actionbar li, #actionbar span{
+    margin: 0 5px;
+    vertical-align: middle;
+
+}
+#actionbar mat-icon{
+    color: #00A6E7;
+    font-size: 25px;
+    vertical-align: bottom;
+}
+mat-toolbar{
+    background-color:#00A6E7;
+    color:white;
+    width: 100%;
+  }
+
+  th mat-toolbar{
+    background-color: #4D4C4C;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  mat-tab-group{
+      background: white;
+      color: white;
+      min-height: 400px;
+      clear: both;
+  }
+  .rightFace{
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  #searchicon{
+    color:gray;
+    position: relative;
+    right: -255px;
+  }
+
+  i.material-icons{
+    margin: 0 5px;
+    color:white;
+    font-size: 24px;
+  }
+
+

@@ -1,0 +1,89 @@
+  
+  /* Table */
+
+  table{
+   
+    background: white;
+    margin: 30px auto 0 auto;
+    width:95%;
+    
+  }
+
+
+/* td{
+  height: 45px;
+  border-right: black solid 1px;
+  text-align: center;
+}
+
+table th{
+  color: white;
+  background-color: #4D4C4C;
+  border-right: black solid 1px;
+  height: 50px;
+}
+
+table tr{
+  border-right: black solid 1px;
+color: black;
+font-size: 12px;
+font-family: sans-serif;
+} */
+
+  table .mat-cell{
+    font-size: 12px;
+  }
+  .mat-header-cell{
+    font-size: 14px;
+    color: black;
+
+  }
+  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  
+  #scentab{
+    margin-top: 75px;
+  }
+
+  table  i.material-icons{
+    font-size: 14px;
+    margin-left: 40px;
+  }
+
+  tr.mat-header-row{
+    border-bottom: solid lightgray 2px;
+    border-top: solid lightgray 2px;
+  }
+
+  table i.material-icons{
+
+    color:gray;
+    font-size: 14px;
+  }
+
+  .mat-elevation-z8{
+    box-shadow: none;
+  }
+
+  /* radio */
+
+  .mat-radio-button{
+    margin-top: 8px;
+    margin-right: 5px;
+  }
+
+  tr.mat-row:hover{
+  background-color: rgba(136, 206, 233, 0.486) 
+  }
+
+  .checkmark{
+    position: relative;
+    left: -22px;
+    color: white;
+    font-size: 10px;
+  }
+
+  /* tr{transition: all ease-in-out .25s}
+  .selected{background-color: rgb(34, 143, 185) } */
