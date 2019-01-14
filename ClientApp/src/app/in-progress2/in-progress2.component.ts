@@ -13,7 +13,7 @@ export class InProgress2Component implements OnInit {
 
   ngOnInit() {
 
-    getScenarios();
+    // getScenarios();
   }
 
 }

@@ -1,16 +1,14 @@
 
-<table id="scentab" mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+<table id="scentab" mat-table [dataSource]="dataSource"  matSort class="mat-elevation-z8">
+    <!-- [dataSource]="array" -->
    <!-- Position Column -->
    <ng-container matColumnDef="radio">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> &#10004;
       </th>
       <td mat-cell *matCellDef="let element"> 
-        
           
-              <mat-radio-button class="select radiocolor" value="{{element.radio}}"><span class="checkmark">&#10004;</span></mat-radio-button>
-           
-        
-         
+              <mat-radio-button class="select radiocolor" value="{{element.id}}"><span class="checkmark">&#10004;</span></mat-radio-button>
+          
          </td>
     </ng-container>
 
@@ -22,19 +20,19 @@
     </th>
     <td mat-cell *matCellDef="let element"> 
       
-      <a href="#"> {{element.scenario}}</a>
+      <a href="#"> {{element.scenarioname}}</a>
        
        </td>
   </ng-container>
 
   <!-- Name Column -->
   <ng-container matColumnDef="owner">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner 
+    <th  mat-header-cell *matHeaderCellDef mat-sort-header> Owner 
         <span class="rightFace"></span>
         <span ><i class="material-icons">arrow_drop_down</i></span>
 
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.scenarioowner}} </td>
   </ng-container>
 
   <!-- Weight Column -->
@@ -44,7 +42,7 @@
         <span ><i class="material-icons">arrow_drop_down</i></span>
 
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.scenariodate}} </td>
   </ng-container>
 
   <!-- Symbol Column -->
@@ -54,7 +52,7 @@
         <span ><i class="material-icons">arrow_drop_down</i></span>
 
     </th>
-    <td mat-cell *matCellDef="let element"> {{element.version}} </td>
+    <td mat-cell *matCellDef="let element"> {{element.scenarioversion}} </td>
   </ng-container>
   <!-- Symbol Column -->
   <ng-container matColumnDef="status">
@@ -63,14 +61,13 @@
           <span ><i class="material-icons">arrow_drop_down</i></span>
 
       </th>
-      <td mat-cell matTooltip="Info about the status" *matCellDef="let element"> {{element.status}} </td>
+      <td mat-cell matTooltip="Info about the status" *matCellDef="let element"> {{element.scenariostatus}} </td>
     </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
-
-
+  </table>
+<mat-paginator #paginator [pageSizeOptions]="[5, 10, 15, 25]" [pageSize]="10" [length]="dataSource.length"></mat-paginator>
 
     
 <!-- <table>

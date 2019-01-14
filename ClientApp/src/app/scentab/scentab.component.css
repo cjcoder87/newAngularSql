@@ -1,6 +1,10 @@
   
   /* Table */
 
+  #htmltable{
+    color: black;
+  }
+
   table{
    
     background: white;

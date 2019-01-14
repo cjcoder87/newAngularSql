@@ -32,6 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { Scentab2Component } from './scentab2/scentab2.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {ScenarioService} from './services/scenario.service';
+import { DataTableComponent } from './data-table/data-table.component'
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     ProgressbarComponent,
     InProgress2Component,
     ScentabComponent,
-    Scentab2Component
+    Scentab2Component,
+    DataTableComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -83,7 +86,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
       { path: 'in-progress2', component: InProgress2Component },
     ])
   ],
-  providers: [],
+  providers: [ScenarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
