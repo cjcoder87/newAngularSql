@@ -1,12 +1,77 @@
   
-  /* Table */
+  /* Search Bar */
+#search{
+    font-size: 15px;
+    
+}
+
+.searchContainer, #search{
+    margin-left: 15px;
+    color: black;
+}
+/* Search Bar */
+
+.searchContainer {
+    display: grid;
+    grid-template-columns:1.5rem 4fr 1fr;
+    width:300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    /* display: inline; */
+    top: 35px;
+    right: -410px;
+    z-index: 2000000;
+  
+  }
+
+  mat-tab-group #searchicon{
+    color:gray;
+    position: relative;
+    right: -255px;
+  }
+  
+  .searchContainer:focus-within i {
+    display: none;
+  }
+  
+  .searchContainer:focus-within .searchBox{
+    grid-column:1/4;
+  }
+  
+  .searchContainer:focus-within .searchBox::placeholder {
+    color:transparent;
+  }
+  
+  .searchIcon {
+    padding: 0.5rem;
+    grid-row:1;
+    grid-column:1/2;
+    z-index:2;
+    right: -270px;
+    position: absolute;
+    color:gray;
+  }
+  
+  .searchBox {
+    border: 0;
+    padding: 0.5rem;
+    grid-column:2/4;
+    grid-row:1;
+    outline:none;
+    color: black;
+  }/* Table */
 
   #htmltable{
     color: black;
   }
 
+ 
+
+
   table{
-   
+    border-collapse: collapse;
     background: white;
     margin: 30px auto 0 auto;
     width:95%;
@@ -78,9 +143,13 @@ font-family: sans-serif;
     margin-right: 5px;
   }
 
-  tr.mat-row:hover{
-  background-color: rgba(136, 206, 233, 0.486) 
+  tr.mat-row:hover, .record_table tr:hover{
+  background-color: rgba(71, 186, 231, 0.575); 
   }
+
+.highlight_row {
+  background-color: rgba(71, 186, 231, 0.575); 
+}
 
   .checkmark{
     position: relative;

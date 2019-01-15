@@ -1,12 +1,22 @@
 
 
-<mat-toolbar role="heading">
+<!-- <mat-toolbar role="heading">
   <span>Scenario Accelerator</span>
 
   <span class="rightFace"></span>
   <span ><i class="material-icons">settings</i></span>
   <span ><i class="material-icons">person</i></span>
-  </mat-toolbar>
+  </mat-toolbar> -->
+
+  <section class="row">
+    <section class="col-12">
+        <app-navbar></app-navbar>
+
+    </section>
+  </section>
+    <section class="row">
+      <section id="left-wall" class="col-1"></section>
+      <section class="col-11">
 
   <mat-card>
 
@@ -15,15 +25,35 @@
     <h3 id="search">Search</h3>
 
     <div class="searchContainer">
-
-        <input class="searchBox" type="search" name="search" placeholder="">
+        <input class="searchBox" name="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
         <span ><i id="searchicon" class="searchIcon material-icons">search</i></span>
-
+    
       </div>
+   
+
+
+
+     
+      
+      <ng-container *ngIf="show">
+          <div style="margin: 0 auto;text-align: left;">
+              <div>
+                  <label>Name:</label>
+                  <div><input id="tbname" name="yourname" /></div>
+              </div>
+              <div>
+                  <label>Email Address:</label>
+                  <div><input name="email" id="email" /></div></div>
+              <div>
+                  <label>Additional Information (optional):</label>
+                  <div><textarea rows="5" cols="46"></textarea></div>
+              </div>
+          </div>
+      </ng-container>
 
 <ul id="actionbar">
    <li>
-      <mat-icon>add</mat-icon>
+      <mat-icon (click)="toggle()" id="bt">add</mat-icon>
       <span>New</span>
   </li>
   <li>
@@ -60,5 +90,8 @@
 </mat-tab-group>
 
 </mat-card>
+
+</section>
+</section>
 
 <app-footer></app-footer>

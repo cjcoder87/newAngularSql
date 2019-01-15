@@ -1,8 +1,9 @@
 mat-toolbar{
-    background-color:#010101;
-    color:white;
-    width: 100%;
-  }
+  background-color:#106EBE;
+  color:white;
+  width: 100%;
+}
+
   .rightFace{
     /* This fills the remaining space, by using flexbox. 
        Every toolbar row uses a flexbox row layout. */

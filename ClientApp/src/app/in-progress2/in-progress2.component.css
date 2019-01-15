@@ -1,11 +1,26 @@
 mat-card{
     width: 95%;
-    margin: 20px auto;
     background: white;
+    margin: 110px 0;
+    margin-left: 50px;
 }
 
+
+
+#left-wall.col-1{
+  background-color: #4D4C4C;
+  max-width: 5%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 25;
+  left: 0;
+  top: 0;
+}
+
+
 #scenario{
-    color: #00A6E7;
+    color: #106EBE;
     font-size: 20px;
     font-weight: bold;
     margin: 20px auto;
@@ -64,6 +79,7 @@ mat-card{
     top: 115px;
     left: -7px;
     z-index: 9999;
+    display: inline;
 }
 
 
@@ -78,15 +94,16 @@ mat-card{
 
 }
 #actionbar mat-icon{
-    color: #00A6E7;
+    color:#106EBE;
     font-size: 25px;
     vertical-align: bottom;
 }
 mat-toolbar{
-    background-color:#00A6E7;
+    background-color:#106EBE;
     color:white;
     width: 100%;
   }
+
 
   th mat-toolbar{
     background-color: #4D4C4C;

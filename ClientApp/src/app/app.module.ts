@@ -33,7 +33,10 @@ import { Scentab2Component } from './scentab2/scentab2.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {ScenarioService} from './services/scenario.service';
-import { DataTableComponent } from './data-table/data-table.component'
+import { DataTableComponent } from './data-table/data-table.component';
+import {MatInputModule} from '@angular/material/input';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 
 @NgModule({
@@ -55,7 +58,8 @@ import { DataTableComponent } from './data-table/data-table.component'
     InProgress2Component,
     ScentabComponent,
     Scentab2Component,
-    DataTableComponent
+    DataTableComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -71,6 +75,7 @@ import { DataTableComponent } from './data-table/data-table.component'
     MatTooltipModule,
     MatTabsModule,
     MatToolbarModule,
+    MatInputModule,
     MatSortModule,
     MatIconModule,
     MatDividerModule,
