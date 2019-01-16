@@ -5,7 +5,13 @@ mat-card{
     margin-left: 50px;
 }
 
-
+#addscenario{
+  position: absolute;
+  bottom: 43%;
+  padding: 20px;
+  z-index: 200;
+  left: 400px;
+}
 
 #left-wall.col-1{
   background-color: #4D4C4C;

@@ -26,6 +26,11 @@ export class ScenarioService {
   getAllScenarios1(): Observable<Scenario[]> {
     return this.httpService.get<Scenario[]>('http://localhost:8080/api/scenarios');
   }
+
+
+  create(scenario){
+    return this.httpService.post('http://localhost:8080/api/scenarios', scenario);
+  }
   
 
 }

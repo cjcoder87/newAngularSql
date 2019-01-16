@@ -14,42 +14,49 @@
 
     </section>
   </section>
+
+  
     <section class="row">
       <section id="left-wall" class="col-1"></section>
       <section class="col-11">
-
-  <mat-card>
+        
+        <mat-card>
 
     <h2 id="scenario">Scenarios</h2>
 
     <h3 id="search">Search</h3>
 
     <div class="searchContainer">
-        <input class="searchBox" name="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        <input class="searchBox" name="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search by Name or Owner">
         <span ><i id="searchicon" class="searchIcon material-icons">search</i></span>
     
       </div>
-   
+
+<ng-container *ngIf="show">
+
+<form  id="addscenario" #scenario="ngForm" (ngSubmit)="onSubmit(scenario.value)">
+    
+    <!-- <form action="http://localhost:8080/api/scenarios" method="post"> -->
+
+  <h2>Scenario Entry</h2>
+  <div class="form-group"><label for="scenarioname">Scenario Name<input ngModel name="scenarioname" #scenarioname="ngModel" id="scenarioname" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenarioowner">Scenario Owner<input ngModel name="scenarioowner" id="scenarioowner" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenariodate">Scenario Date<input ngModel name="scenariodate" id="scenariodate" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenariversion">Scenario Version<input ngModel name="scenarioversion" id="scenariversion" type="text" class="form-control" required></label></div>
+  <div class="form-group"><label for="scenariostatus">Scenario Status<input ngModel name="scenariostatus" id="scenariostatus" type="text" class="form-control" required></label></div>
+  
+  <button class="btn btn-primary">Save</button>
+
+</form>
+
+    <!-- <p>Scenario name value: {{ scenarioname.value }}</p>
+    <p>Scenario name valid: {{ scenarioname.valid }}</p>
+    <p>Form value: {{ scenario.value | json }}</p>
+    <p>Form valid: {{ scenario.valid }}</p> -->
 
 
 
-     
-      
-      <ng-container *ngIf="show">
-          <div style="margin: 0 auto;text-align: left;">
-              <div>
-                  <label>Name:</label>
-                  <div><input id="tbname" name="yourname" /></div>
-              </div>
-              <div>
-                  <label>Email Address:</label>
-                  <div><input name="email" id="email" /></div></div>
-              <div>
-                  <label>Additional Information (optional):</label>
-                  <div><textarea rows="5" cols="46"></textarea></div>
-              </div>
-          </div>
-      </ng-container>
+</ng-container>
 
 <ul id="actionbar">
    <li>
@@ -92,6 +99,9 @@
 </mat-card>
 
 </section>
+
+
 </section>
+
 
 <app-footer></app-footer>
