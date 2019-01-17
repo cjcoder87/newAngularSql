@@ -24,7 +24,6 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import 'hammerjs';
 import { ProgressbarComponent } from './progressbar/progressbar.component';
 import { InProgress2Component } from './in-progress2/in-progress2.component';
-import { ScentabComponent } from './scentab/scentab.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTableModule} from '@angular/material/table';
@@ -33,11 +32,10 @@ import { Scentab2Component } from './scentab2/scentab2.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {ScenarioService} from './services/scenario.service';
+import {SortService} from './services/sort.service';
 import { DataTableComponent } from './data-table/data-table.component';
 import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './navbar/navbar.component';
-
-
 
 @NgModule({
   declarations: [
@@ -56,7 +54,6 @@ import { NavbarComponent } from './navbar/navbar.component';
     CompletedComponent,
     ProgressbarComponent,
     InProgress2Component,
-    ScentabComponent,
     Scentab2Component,
     DataTableComponent,
     NavbarComponent
@@ -91,7 +88,7 @@ import { NavbarComponent } from './navbar/navbar.component';
       { path: 'in-progress2', component: InProgress2Component },
     ])
   ],
-  providers: [ScenarioService],
+  providers: [ScenarioService, SortService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

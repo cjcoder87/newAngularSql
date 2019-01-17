@@ -4,15 +4,15 @@ import { Component, OnInit } from '@angular/core';
 import '../scenarios.js';
 import { NgForm } from '@angular/forms';
 
-export interface Scenarios {
-  id:number;
-  scenarioname: string;
-  scenarioowner: string;
-  scenariodate: string;
-  scenarioversion: string;
-  scenariostatus: string;
+// export interface Scenarios {
+//   id:number;
+//   scenarioname: string;
+//   scenarioowner: string;
+//   scenariodate: string;
+//   scenarioversion: string;
+//   scenariostatus: string;
   
-}
+// }
 
 @Component({
   selector: 'app-in-progress2',
@@ -24,11 +24,11 @@ export interface Scenarios {
 export class InProgress2Component implements OnInit {
   public show:boolean = false;
   public buttonName:any = 'Show';
-  scenerio: Scenarios;
+  // scenerio: Scenarios;
   
 
 
-  constructor(private httpService: HttpClient) { }
+  constructor(private ScenarioService: ScenarioService) { }
 
   ngOnInit() {
 
@@ -46,7 +46,7 @@ export class InProgress2Component implements OnInit {
   onSubmit(scenario: NgForm){
     console.log(scenario);
     // console.log(scenario.valid);
-    this.httpService.post("http://localhost:8080/api/scenarios", scenario).subscribe(data => console.log(data));
+    this.ScenarioService.create(scenario);
 
   }
 
