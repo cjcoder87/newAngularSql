@@ -1,5 +1,5 @@
 import { ScenarioService } from './../services/scenario.service';
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, Input} from '@angular/core';
 import {MatSort, MatTableDataSource, MatPaginator} from '@angular/material';
 import '../rowcolor.js';
 
@@ -21,14 +21,14 @@ export class Scentab2Component implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  dataSource;
+  public dataSource;
   displayedColumns: any[] = ['id','scenarioname', 'scenarioowner', 'scenariodate', 'scenarioversion', 'scenariostatus'];
 
   constructor(private scenarioService:ScenarioService){}
 
   //  Filter
 
-   applyFilter(filterValue: string) {
+  public applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 

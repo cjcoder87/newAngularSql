@@ -26,9 +26,11 @@
 
     <h3 id="search">Search</h3>
 
+    <!-- Search Bar -->
+
     <div class="searchContainer">
-        <input class="searchBox" name="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search by Name or Owner">
-        <span ><i id="searchicon" class="searchIcon material-icons">search</i></span>
+        <input class="searchBox" name="search" matInput (keyup)="childcomponent.applyFilter($event.target.value)" placeholder="Search by Name or Owner">
+        <i id="searchicon" class="searchIcon material-icons">search</i>
     
       </div>
 
@@ -86,7 +88,7 @@
 <mat-tab-group>
   <mat-tab label="In-Progress">
 
-    <app-scentab2></app-scentab2>
+    <app-scentab2 #childcomponent></app-scentab2>
     
   </mat-tab>
   <mat-tab label="Completed">

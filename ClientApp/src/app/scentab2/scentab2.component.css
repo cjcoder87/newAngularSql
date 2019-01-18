@@ -143,9 +143,9 @@ font-family: sans-serif;
     margin-right: 5px;
   }
 
-  tr.mat-row:hover, .record_table tr:hover{
+  /* tr.mat-row:hover, .record_table tr:hover{
   background-color: rgba(71, 186, 231, 0.575) !important; 
-  }
+  } */
 
 .highlight_row {
   background-color: rgba(71, 186, 231, 0.575); 
@@ -175,7 +175,7 @@ font-family: sans-serif;
     height: 28px;
     left: 0;
     position: absolute;
-    top: 0;
+    top: -4px;
     width: 28px;
   }
   

@@ -36,6 +36,8 @@ import {SortService} from './services/sort.service';
 import { DataTableComponent } from './data-table/data-table.component';
 import {MatInputModule} from '@angular/material/input';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TestComponent } from './test/test.component';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     InProgress2Component,
     Scentab2Component,
     DataTableComponent,
-    NavbarComponent
+    NavbarComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -80,6 +83,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     RouterModule.forRoot([
       //{ path: '', component: AppComponent, pathMatch: 'full' },
       { path: 'agent', component: AgentComponent },
+      { path: 'agent/you', component: AgentComponent },
       { path: 'interpretation', component: InterpretationComponent },
       { path: 'confidence', component: ConfidenceComponent },
       { path: 'scope', component: ScopeComponent },

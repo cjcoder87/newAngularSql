@@ -1,9 +1,3 @@
-
-<div class="searchContainer">
-    <input class="searchBox" name="search" matInput (keyup)="applyFilter($event.target.value)" placeholder="Search by Name or Owner">
-    <span ><i id="searchicon" class="searchIcon material-icons">search</i></span>
-  </div>
-
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 <!-- Position Column -->
    <ng-container matColumnDef="id">
@@ -30,7 +24,7 @@
   <!-- Position Column -->
   <ng-container matColumnDef="scenarioname">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> Scenario Name 
-        <span class="rightFace"></span>
+        <span class="rightFaceactio"></span>
         <span ><i class="material-icons">arrow_drop_down</i></span>
 
     </th>

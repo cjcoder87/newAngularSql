@@ -1,8 +1,10 @@
+import { Scentab2Component } from './../scentab2/scentab2.component';
 import { HttpClient } from '@angular/common/http';
 import { ScenarioService } from './../services/scenario.service';
 import { Component, OnInit } from '@angular/core';
 import '../scenarios.js';
 import { NgForm } from '@angular/forms';
+// import  from '../'
 
 // export interface Scenarios {
 //   id:number;
@@ -20,10 +22,10 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./in-progress2.component.css']
 })
 
-
 export class InProgress2Component implements OnInit {
   public show:boolean = false;
   public buttonName:any = 'Show';
+  dataSource: any;
   // scenerio: Scenarios;
   
 
@@ -48,6 +50,10 @@ export class InProgress2Component implements OnInit {
     // console.log(scenario.valid);
     this.ScenarioService.create(scenario);
 
+  }
+
+   applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
  
